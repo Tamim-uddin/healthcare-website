@@ -34,7 +34,10 @@ function App() {
               </Route>
               <Route path="/register">
                 <Register></Register>  
-              </Route>          
+              </Route> 
+              <Route path="*">
+                <NotFound></NotFound>
+              </Route>         
           </Switch>
           <Footer></Footer>
         </Router>

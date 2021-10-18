@@ -18,7 +18,10 @@ const Services = () => {
             </div>
            <div className="services-container">
             {
-                services.map(user => <Service user={user}></Service>)
+                services.map(user => <Service
+                     key={user.id}
+                     user={user}>           
+                     </Service>)
             }
            </div>
         </div>

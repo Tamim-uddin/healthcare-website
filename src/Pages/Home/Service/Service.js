@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './service.css';
 
 const Service = (props) => {
-    console.log(props);
+    // console.log(props);
     const {id, name, description, img} = props.user;
     return (
         <div className="service">
