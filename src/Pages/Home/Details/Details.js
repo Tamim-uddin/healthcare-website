@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import './Details.css';
+
 
 const Details = () => {
     const {serviceId} = useParams();
-    const [detail, setdetail] = useState([]);
+    const [details, setdetails] = useState({});
     useEffect( () => {
         // const url = `/servicesdata.json/${serviceId}`
-        fetch('/servicesdata.json')
+        fetch(`/servicesdata.json/${serviceId}`)
         .then(res => res.json())
-        .then(data => setdetail(data));
+        .then(data =>setdetails(data));
     } , [])
 
     return (
-        <div>
-            <h2>from details {serviceId}</h2>
-            <h3>name: {detail?.name}</h3>
+        <div className='detail'>
+            <h3>ServiceId: {serviceId}</h3>
+            <h3>name: {details?.name}</h3>
         </div>
     );
 };

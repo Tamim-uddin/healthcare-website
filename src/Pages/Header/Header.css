@@ -5,3 +5,11 @@
     text-decoration: none;
     color: white;
 }
+.nav-text{
+    font-family: MV Boli;
+}
+.logout-btn{
+    text-decoration: none;
+    border: none;
+    outline: none;
+}

@@ -10,9 +10,9 @@ const Header = () => {
     return (
         <div className="header-container">           
               <>
-                <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
+                <Navbar bg="day" variant="day" sticky="top" collapseOnSelect expand="lg">
                   <Container>
-                  <Navbar.Brand href="#home">Medizoid.</Navbar.Brand>
+                  <Navbar.Brand href="#home" className='nav-text'>Medizoid</Navbar.Brand>
                   <Navbar.Toggle />
                   <Navbar.Collapse className="justify-content-end">
                       <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
@@ -21,7 +21,7 @@ const Header = () => {
                       <Nav.Link as={HashLink} to="/home#contactus">Contact Us</Nav.Link>
                       
                       { user?.email ?
-                        <Button onClick={logOut} variant="warning">LogOUt</Button>:
+                        <Button onClick={logOut} variant="warning" className='logout-btn'>LogOut</Button>:
                       <Nav.Link as={Link} to="/login">Login</Nav.Link>}
                       <Navbar.Text>
                       Signed in as: <a href="#login">{user?.displayName}</a>

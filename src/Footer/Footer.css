@@ -11,8 +11,7 @@
 }
 .footer p:hover{
     color: white;
-    border-bottom: 1px solid #fff;
-    line-height: 1.8em;
+    text-decoration: underline;
 }
 .footer h3{
     color: #fff;
