@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
 import { NavLink } from 'react-router-dom';
 import UseAuth from '../../../Hooks/UseAuth';
 import './Login.css';
@@ -25,15 +24,12 @@ const Login = () => {
            history.push(redierect_uri)
         })
     }
-
     const handlePasswordChange = e => {
         setPassword(e.target.value);
     }
-
     const handleEmailChange = e => {
         setEmail(e.target.value);
     }
-
     const handleRegistration = e => {
         e.preventDefault();
         console.log(email, password);
@@ -50,24 +46,19 @@ const Login = () => {
         .catch(error => {
             setError(error.message);
         })
-        
-       
     }
-
-
 
     return (
         <div id="login" className="loginform">
-            <h3> Login</h3>
+            <h3>Please Login</h3>
             <form onSubmit={handleRegistration}>
-                <input onBlur={handleEmailChange} type="email" placeholder="Email" required/><br /><br />
-                <input onBlur={handlePasswordChange} type="password" placeholder="Password" required/><br /><br />
-                <input type="submit" value="Log In" />
-            </form><br />
-            <div className="text-danger">{error}</div>
-                <p>New to Medizoid? <NavLink to="/register">Registration</NavLink></p>
-            <br />
+                <input onBlur={handleEmailChange} type="email" placeholder="Email" required/><br />
+                <input onBlur={handlePasswordChange} type="password" placeholder="Password" required/><br />
+                <button type="submit" class="btn btn-primary">LogIn</button>
+            </form>
+                <p>New to Medizoid? <NavLink to="/register">Registration</NavLink></p><br />
             <button className="btn btn-warning" onClick={handleGooglesignin}>Google Signin</button>
+            <div className="text-danger">{error}</div>
         </div>
     );
 };

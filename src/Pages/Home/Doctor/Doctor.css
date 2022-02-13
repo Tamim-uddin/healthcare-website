@@ -1,15 +1,15 @@
-.service{
+.doctor{
     
     border-radius: 5px;
     padding: 8px;
     background-color: #f0f0f0;;
 }
-.service:hover{
-     transform: scale(1.05);
+.doctor:hover{
+     transform: scale(.9);
      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
    
 }
-.service img{
+.doctor img{
     width: 95%;
     height: 300px;
     border-radius: 5px;

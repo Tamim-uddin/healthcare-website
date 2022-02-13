@@ -5,13 +5,13 @@ import './Details.css';
 
 const Details = () => {
     const {serviceId} = useParams();
-    const [details, setdetails] = useState({});
+    const [details, setdetails] = useState([]);
     useEffect( () => {
         // const url = `/servicesdata.json/${serviceId}`
         fetch(`/servicesdata.json/${serviceId}`)
         .then(res => res.json())
         .then(data =>setdetails(data));
-    } , [])
+    } , [serviceId])
 
     return (
         <div className='detail'>
